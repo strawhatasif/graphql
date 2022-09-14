@@ -13,7 +13,7 @@ public class ReviewRepository {
     JdbcTemplate jdbcTemplate;
 
     String query = "select * from reviews where review_id=?";
-    String retrieveAllQuery = "select * from reviews";
+    String retrieveAllQuery = "select * from reviews r join users u on r.user_id=u.user_id";
 
     public Review findById(int id) {
         return jdbcTemplate.queryForObject(query, new ReviewRowMapper(), id);
