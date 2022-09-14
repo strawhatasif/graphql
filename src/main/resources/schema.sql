@@ -1,14 +1,14 @@
+CREATE TABLE users
+(
+ user_id VARCHAR(36) PRIMARY KEY NOT NULL,
+ user_name VARCHAR(60) NOT NULL,
+ first_name VARCHAR(60) NOT NULL
+);
 create table reviews
 (
- review_id varchar(36) not null,
- user_id varchar(36) not null,
- title varchar(100),
- description varchar(350),
- rating integer
-);
-create table users
-(
- user_id varchar(36) not null,
- user_name varchar(60) not null,
- first_name varchar(60) not null
+ review_id VARCHAR(36) NOT NULL,
+ user_id VARCHAR(36) NOT NULL,
+ title VARCHAR(100),
+ description VARCHAR(350),
+ rating INTEGER
 );
